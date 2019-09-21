@@ -1,1 +1,20 @@
-<!--  -->
+<header class="header">
+    <div class="container">
+        <img src="../../../assets/images/eco-friendly.png" class="bus-nsw-logo">
+        <img src="../../../assets/images/bus-nsw-logo.png" class="bus-nsw-logo">
+        <!-- <h1 class="bus-nsw-text">Eco friendly NSW Bus</h1> -->
+    </div>
+</header>
+<div class="container">
+    <div>
+        <h1>Bus Reports</h1>
+    </div>
+    <div *ngFor="let item of reports">
+        <h3>{{item.organisation}} - {{item.date}}</h3>
+        <app-table-structure class="table-data" [busData]="item.busData">
+        </app-table-structure>
+    </div>
+</div>
+<footer class="footer">
+    &copy; Ecofriendly Bus
+</footer>

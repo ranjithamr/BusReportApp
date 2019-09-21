@@ -13,7 +13,15 @@ export class BusReportComponent implements OnInit {
   constructor(private busReportService: BusReportService) { }
 
   ngOnInit() {
-    
+    this.getBusReports();
+  }
+
+  getBusReports() {
+    return this.busReportService.fetchBusReports().subscribe(reports => {
+      this.reports = reports.data;
+      this.busData = reports.data[0].busData;
+      console.log(this.busData);
+    })
   }
 
 }

@@ -8,4 +8,8 @@ export class BusReportService {
 
   constructor(private http: HttpClient) { }
 
+  fetchBusReports() {
+    return this.http.get('../../assets/data/bus-services-data.json');
+  }
+
 }

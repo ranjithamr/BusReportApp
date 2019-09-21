@@ -1,1 +1,16 @@
-<!--  -->
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col-2">Bus ID</th>
+        <th scope="col-5">Route Variant</th>
+        <th scope="col-5">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of busData">
+        <td>{{item.busId}}</td>
+        <td>{{item.routeVariant}}</td>
+        <td>{{calculateStatus(item.deviationFromTimetable)}}</td>
+        </tr>
+    </tbody>
+</table>
