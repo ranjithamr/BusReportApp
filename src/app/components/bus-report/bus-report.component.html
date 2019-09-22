@@ -2,17 +2,29 @@
     <div class="container">
         <img src="../../../assets/images/eco-friendly.png" class="bus-nsw-logo">
         <img src="../../../assets/images/bus-nsw-logo.png" class="bus-nsw-logo">
-        <!-- <h1 class="bus-nsw-text">Eco friendly NSW Bus</h1> -->
     </div>
 </header>
-<div class="container">
-    <div>
+<div class="container container-body" id="accordion">
+    <div class="heading">
         <h1>Bus Reports</h1>
     </div>
-    <div *ngFor="let item of reports">
-        <h3>{{item.organisation}} - {{item.date}}</h3>
-        <app-table-structure class="table-data" [busData]="item.busData">
-        </app-table-structure>
+    <div *ngFor="let item of reports; let ind = index">
+        <div class="card">
+            <div class="card-header" [id]="'heading' + ind">
+                <h3 class="mb-0">
+                    <a role="button" data-toggle="collapse" [href]="'#collapse' + ind" aria-expanded="false" 
+                    [attr.aria-controls]="'collapse' + ind" class="toggle-button">
+                        {{item.organisation}} - {{item.date}}
+                    </a>
+                </h3>
+            </div>
+            <div [id]="'collapse' + ind" class="collapse" [attr.aria-labelledby]="'heading' + ind" data-parent="#accordion">
+                <div class="card-body">
+                    <app-table-structure class="table-data" [busData]="item.busData">
+                    </app-table-structure>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <footer class="footer">

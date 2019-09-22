@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BusReportService } from '../../services/bus-report.service'
+import { BusReportService } from '../../services/bus-report.service';
 
 @Component({
   selector: 'app-bus-report',
@@ -8,7 +8,6 @@ import { BusReportService } from '../../services/bus-report.service'
 })
 export class BusReportComponent implements OnInit {
   reports;
-  busData;
 
   constructor(private busReportService: BusReportService) { }
 
@@ -17,11 +16,9 @@ export class BusReportComponent implements OnInit {
   }
 
   getBusReports() {
-    return this.busReportService.fetchBusReports().subscribe(reports => {
+    return this.busReportService.fetchBusReports().subscribe((reports: any) => {
+      console.log(reports);
       this.reports = reports.data;
-      this.busData = reports.data[0].busData;
-      console.log(this.busData);
     })
   }
-
 }
