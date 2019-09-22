@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { BoldStringPipe } from '../../pipes/bold-string-pipe.pipe'
+import { BoldStringPipe } from '../../pipes/bold-string-pipe.pipe';
 import { TableStructureComponent } from './table-structure.component';
 
 describe('TableStructureComponent', () => {

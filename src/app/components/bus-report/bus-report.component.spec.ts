@@ -39,20 +39,20 @@ describe('BusReportComponent', () => {
       busReportService = TestBed.get(BusReportService);
       spyOn(busReportService, 'fetchBusReports');
     });
-    
+
     it('should get bus report data from busReportService', async () => {
       await busReportService.fetchBusReports();
       expect(busReportService.fetchBusReports).toHaveBeenCalled();
-    })
+    });
 
     it('should get the correct json data', inject([HttpClient], (httpClient: HttpClient) => {
-      const data = require('../../../assets/data/bus-services-data.json');    
+      const data = require('../../../assets/data/bus-services-data.json');
       let busReportComponent;
       busReportComponent = TestBed.get(BusReportComponent);
-      spyOn(httpClient, 'get').and.returnValue(of(data)); 
+      spyOn(httpClient, 'get').and.returnValue(of(data));
       busReportComponent.getBusReports().subscribe((result) => {
         expect(result[0]).toEqual(data[0]);
       });
-    }))
-  })
+    }));
+  });
 });

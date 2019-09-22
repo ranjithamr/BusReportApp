@@ -1,0 +1,7 @@
+* Since there is no requirement specifiying the facts to decide the Status,
+    I have made the following assumptions comparing json data and the image -
+    1. Bus is "Late", if the deviation is greater than 220.
+    2. Bus is "On time", if the devation is between 0 and 220.
+    3. Bus is "Early", if the devation is less than 0.
+    4. Status is "Unknown, if the deviation is unkown.
+

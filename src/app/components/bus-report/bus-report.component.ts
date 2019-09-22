@@ -18,6 +18,6 @@ export class BusReportComponent implements OnInit {
   getBusReports() {
     return this.busReportService.fetchBusReports().subscribe((reports: any) => {
       this.reports = reports.data;
-    })
+    });
   }
 }

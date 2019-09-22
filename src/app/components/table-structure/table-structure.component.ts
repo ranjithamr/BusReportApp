@@ -7,21 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TableStructureComponent implements OnInit {
   @Input() busData;
-  
+
   constructor() { }
 
   ngOnInit() {
   }
 
   calculateStatus(deviation) {
-    if( deviation > 220 )
+    if ( deviation > 220 )
       return 'Late';
-    else if( deviation <= 220 && deviation > 0 )
+    else if ( deviation <= 220 && deviation > 0 )
       return 'On time';
-    else if( deviation < 0 )
-      return 'Early'
-    else if( deviation === null )
+    else if ( deviation < 0 )
+      return 'Early';
+    else if ( deviation === null )
       return 'Unknown';
   }
-
 }

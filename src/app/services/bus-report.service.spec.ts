@@ -8,7 +8,7 @@ describe('BusReportService', () => {
   let httpClient: HttpClient;
   let httpMock: HttpTestingController;
   let busReportService: BusReportService;
-  
+
   beforeEach(() => TestBed.configureTestingModule({
     imports: [ HttpClientTestingModule ],
     providers: [ BusReportService ]
@@ -29,6 +29,5 @@ describe('BusReportService', () => {
   it('should call the json to get the reports', async () => {
     await busReportService.fetchBusReports();
     expect(busReportService.fetchBusReports).toHaveBeenCalled();
-  })
-
+  });
 });
