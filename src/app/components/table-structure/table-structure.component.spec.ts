@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { BoldStringPipe } from '../../pipes/bold-string-pipe.pipe'
 import { TableStructureComponent } from './table-structure.component';
 
 describe('TableStructureComponent', () => {
@@ -8,7 +8,7 @@ describe('TableStructureComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TableStructureComponent ]
+      declarations: [ TableStructureComponent, BoldStringPipe ]
     })
     .compileComponents();
   }));

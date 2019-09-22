@@ -8,13 +8,15 @@ import { TableStructureComponent } from './components/table-structure/table-stru
 import { HttpClientModule } from '@angular/common/http';
 import { BusReportService } from './services/bus-report.service';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { BoldStringPipe } from './pipes/bold-string-pipe.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BusReportComponent,
-    TableStructureComponent
+    TableStructureComponent,
+    BoldStringPipe
   ],
   imports: [
     BrowserModule,

@@ -17,7 +17,6 @@ export class BusReportComponent implements OnInit {
 
   getBusReports() {
     return this.busReportService.fetchBusReports().subscribe((reports: any) => {
-      console.log(reports);
       this.reports = reports.data;
     })
   }
