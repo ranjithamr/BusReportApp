@@ -22,6 +22,14 @@
                 <div class="card-body">
                     <app-table-structure class="table-data" [busData]="item.busData">
                     </app-table-structure>
+                    <div class="text-area">
+                        <textarea class="form-control" rows="3"  [id]="'notes' + ind" placeholder="Enter notes here"
+                            [innerHTML] = getNotes(item.organisation)>
+                        </textarea>
+                        <button type="button" class="btn btn-primary btn-save" (click)="saveNotes(item.organisation, ind);">
+                            Save Notes
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

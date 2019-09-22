@@ -61,3 +61,12 @@
 .mb-0 > a[aria-expanded="true"]:after {
     content: "\f139";
 }
+
+.text-area {
+    padding: 20px;
+    text-align: left;
+}
+
+.btn-save {
+    margin-top: 20px;
+}

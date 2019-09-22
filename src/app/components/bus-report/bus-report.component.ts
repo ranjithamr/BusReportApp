@@ -20,4 +20,13 @@ export class BusReportComponent implements OnInit {
       this.reports = reports.data;
     });
   }
+
+  saveNotes(organisation, ind) {
+    let notes = (<HTMLInputElement>document.getElementById('notes' + ind)).value;
+    localStorage.setItem(organisation, notes);
+  }
+
+  getNotes(organisation) {
+    return localStorage.getItem(organisation);
+  }
 }

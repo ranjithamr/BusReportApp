@@ -5,3 +5,6 @@
     3. Bus is "Early", if the devation is less than 0.
     4. Status is "Unknown, if the deviation is unkown.
 
+* Since there is no endpoint provided for notes submission,
+    I am saving the notes in localStorage for that particular organisation
+    and this is retrieved on initialisation to show on the report.
